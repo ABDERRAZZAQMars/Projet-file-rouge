@@ -97,3 +97,26 @@
         </div>
     </div>
 </div>
+
+<div class="container-fluid bg-black">
+    <div class="container row mx-auto py-3 d-flex justify-content-around text-white">
+        <div class=" my-2 bg-secondary rounded col-lg-3 col-md-3 col-sm-12 py-3">
+            <a href="" class="d-flex flex-column align-items-center text-white" style="text-decoration:none;">
+                <img src="./views/assets/img/icone1.png" alt="" id="icone">
+                <h5 class="mt-3">Envoye un colis</h5>
+            </a>
+        </div>
+        <div class=" my-2 bg-secondary rounded col-lg-3 col-md-3 col-sm-12 py-3">
+            <a href="" class="d-flex flex-column align-items-center text-white" style="text-decoration:none;">
+                <img src="./views/assets/img/icone2.png" alt="" id="icone">
+                <h5 class="mt-3">Trouver un transporteur</h5>
+            </a>
+        </div>
+        <div class=" my-2 bg-secondary rounded col-lg-3 col-md-3 col-sm-12 py-3">
+            <a href="" class="d-flex flex-column align-items-center text-white" style="text-decoration:none;">
+                <img src="./views/assets/img/icone3.png" alt="" id="icone">
+                <h5 class="mt-3">Suivi</h5>
+            </a>
+        </div>
+    </div>
+</div>
