@@ -163,3 +163,7 @@
         </div>
     </form>
 </div>
+
+<div class="container-fluid mx-auto" style="background-color: #2E3192;">
+    <p class="text-white text-center py-3 mb-0 !important">2022 Copyright : ABDERRAZZAQ Mars</p>
+</div>
