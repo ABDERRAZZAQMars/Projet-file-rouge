@@ -147,3 +147,19 @@
         </div>
     </div>
 </div>
+
+<div class="m-4">
+    <form>
+        <div class="container row d-flex mx-auto">
+            <div class="col-5">
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="Entrer votre email">
+            </div>
+            <div class="col-5">
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="Entrer votre message">
+            </div>
+            <div class="col-2">
+                <button type="submit" class="btn text-white border border-secondary" style="background-color: #FF8D29;">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
