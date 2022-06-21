@@ -55,7 +55,7 @@
 </div>
 <!-- fin model -->
 
-
+<!-- START NAVBAR -->
 <nav>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -84,8 +84,10 @@
         </div>
     </nav>
 </nav>
+<!-- FIN NAVBAR -->
 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+<!-- START FULL PAGE BACKGROUND -->
+<section id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="./views/assets/img/backgroundHome.jpg" class="d-block w-100" style="height:100vh" alt="backgroundHome">
@@ -96,9 +98,11 @@
             </div>
         </div>
     </div>
-</div>
+</section>
+<!-- FIN FULL PAGE BACKGROUND -->
 
-<div class="container-fluid bg-black">
+<!-- START LES CARDS -->
+<section class="container-fluid bg-black">
     <div class="container row mx-auto py-3 d-flex justify-content-around text-white">
         <div class=" my-2 bg-secondary rounded col-lg-3 col-md-3 col-sm-12 py-3">
             <a href="" class="d-flex flex-column align-items-center text-white" style="text-decoration:none;">
@@ -119,9 +123,11 @@
             </a>
         </div>
     </div>
-</div>
+</section>
+<!-- START LES CARDS -->
 
-<div style="background-color: #E9E9E9;">
+<!-- START QUI SOMMES NOUS -->
+<section style="background-color: #E9E9E9;">
     <div class="py-5 text-center">
         <h1 style="color: #FF8D29;">Qui sommes nous</h1>
         <div class="mt-5 fs-4 mx-3">
@@ -146,9 +152,11 @@
             </div>
         </div>
     </div>
-</div>
+</section>
+<!-- FIN QUI SOMMES NOUS -->
 
-<div class="m-4">
+<!-- START CONTACT NOUS -->
+<!-- <section class="m-4">
     <form>
         <div class="container row d-flex mx-auto">
             <div class="col-5">
@@ -158,12 +166,117 @@
                 <input type="text" id="disabledTextInput" class="form-control" placeholder="Entrer votre message">
             </div>
             <div class="col-2">
-                <button type="submit" class="btn text-white border border-secondary" style="background-color: #FF8D29;">Submit</button>
+                <button type="submit" class="btn text-white" style="background-color: #FF8D29;">Submit</button>
             </div>
         </div>
     </form>
-</div>
+</section> -->
+<!-- FIN CONTACT NOUS -->
+<div class="container-fluid row d-flex justify-content-end align-items-center ">
+        <div class="col-5">
+            <h3 class="pb-2 border-bottom">Envoie-nous un message</h3>
+            <div class="mt-4">
+                <form>
+                    <div class="d-flex gap-2 mt-3">
+                        <input type="text" class="form-control border-secondary" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Votre nom">
+                        <input type="text" class="form-control border-secondary" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Objet">
+                    </div>
+                    <div class="d-flex gap-2 mt-3">
+                        <input type="text" class="form-control border-secondary" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Votre adresse e-mail">
+                        <input type="text" class="form-control border-secondary" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Votre numéro">
+                    </div>
+                    <div class="d-flex mt-3 mb-3">
+                        <textarea placeholder="Votre message" name="" id="" rows="8" class="w-100 form-control border-secondary"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center ">
+                        <button type="submit" class="btn text-white col-5" style="background-color: #FF8D29;">Submit</button>
+                    </div>
 
-<div class="container-fluid mx-auto" style="background-color: #2E3192;">
-    <p class="text-white text-center py-3 mb-0 !important">2022 Copyright : ABDERRAZZAQ Mars</p>
-</div>
+                </form>
+            </div>
+        </div>
+        <div class="col-6">
+    <img src="./views/assets/img/alo.jpg" class="w-100" alt="">    
+    </div>
+    </div>
+<!-- START FOOTER -->
+<footer>
+    <div class="container-fluid" style="background-color: #2E3192;">
+        <div class="container row d-flex mx-auto py-4">
+            <!-- LOGO DE PROJET -->
+            <div class="col-4">
+                <img src="./views/assets/img/logoWhite.png" width="250" alt="">
+                <h6 class="text-white my-3 ">Partenaire officiel</h6>
+                <img src="./views/assets/img/logoyoucode-white.png " width="150 " alt=" ">
+            </div>
+            <!-- LISTE MENU -->
+            <div class="col-2 ">
+                <h4 class="text-white mb-4">Menu</h4>
+                <ul class="list-unstyled">
+                    <li class="mt-2 ">
+                        <a href="# " class="text-white text-decoration-none ">À propos</a>
+                    </li>
+                    <li class="mt-2 ">
+                        <a href="# " class="text-white text-decoration-none ">Réservation</a>
+                    </li>
+                    <li class="mt-2 ">
+                        <a href="# " class="text-white text-decoration-none ">Contact nous</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- LISTE ENTREPRISE -->
+            <div class="col-2 ">
+                <h4 class="text-white mb-4">Entreprise</h4>
+                <ul class="list-unstyled ">
+                    <li class="mt-2 ">
+                        <a href="# " class="text-white text-decoration-none ">Espace Admin</a>
+                    </li>
+                    <li class="mt-2 ">
+                        <a href="# " class="text-white text-decoration-none ">Espace Client</a>
+                    </li>
+                    <li class="mt-2 ">
+                        <a href="# " class="text-white text-decoration-none ">Contact nous</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- LISTE SERVICES -->
+            <div class="col-2 ">
+                <h4 class="text-white mb-4">Services</h4>
+                <ul class="list-unstyled">
+                    <li class="mt-2 ">
+                        <a href="# " class="text-white text-decoration-none ">Envoye un colis</a>
+                    </li>
+                    <li class="mt-2 ">
+                        <a href="# " class="text-white text-decoration-none ">Suivi</a>
+                    </li>
+                    <li class="mt-2 ">
+                        <a href="# " class="text-white text-decoration-none ">Trouver un transporteur</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- LISTE SUIVEZ NOUS -->
+            <div class="col-2 ">
+                <h4 class="text-white mb-4">Suivez-nous</h4>
+                <ul class="list-unstyled d-flex">
+                    <li>
+                        <a href="#"><i class="bi bi-facebook fs-3 text-white me-lg-4"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="bi bi-instagram fs-3 text-white me-lg-4"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="bi bi-linkedin fs-3 text-white me-lg-4"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="bi bi-twitter fs-3 text-white"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- COPYRIGHT ABDERRAZZAQ MARS -->
+    <div class="container-fluid mx-auto " style="background-color: #FF8D29; ">
+        <h6 class="text-white text-center py-3 mb-0 !important ">2022 Copyright : ABDERRAZZAQ Mars</h6>
+    </div>
+</footer>
+<!-- START FOOTER -->
