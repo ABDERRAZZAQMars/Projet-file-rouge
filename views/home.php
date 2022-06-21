@@ -120,3 +120,30 @@
         </div>
     </div>
 </div>
+
+<div style="background-color: #E9E9E9;">
+    <div class="py-5 text-center">
+        <h1 style="color: #FF8D29;">Qui sommes nous</h1>
+        <div class="mt-5 fs-4 mx-3">
+            <p>YouTrans est une plateforme qui vous permet de trouver et géolocaliser rapidement un triporteur, une mini Honda ou un pick-up pour le transport de toutes vos marchandises.</p>
+            <p>Vous pourrez suivre en direct votre « Transporteur» du point de départ au point d’arrivée et négocier le tarif de vos courses et transports directement avec lui lors de sa présélection sur l’application.</p>
+            <p>YouTrans compte aujourd’hui plus de 1000 « Transports» vérifiés qui sont actuellement référencés et déployés sur Maroc pour répondre à toutes vos demandes sans que vous ayez à vous déplacer et depuis l’endroit où vous êtes.</p>
+        </div>
+    </div>
+    <div class="container row mx-auto pb-5 d-flex justify-content-around">
+        <div class="card col-lg-5 col-md-4 col-sm-6" style="padding: 0 !important;">
+            <img src="./views/assets/img/imgC1.jpg" class="card-img-top w-100" alt="...">
+            <div class="card-body text-center">
+                <h5 class="card-title">Confiance</h5>
+                <p class="card-text">Nos peecoopers, sérieux et expérimentés, vous garantissent la livraison de vos colis dans les conditions les plus optimales.</p>
+            </div>
+        </div>
+        <div class="card col-lg-5 col-md-4 col-sm-6" style="padding: 0 !important;">
+            <img src="./views/assets/img/imgC2.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <h5 class="card-title">Rapidité</h5>
+                <p class="card-text">Réponse rapide à vos demandes de prix, livraison le plus rapidement possible et assistance en ligne ou par téléphone. </p>
+            </div>
+        </div>
+    </div>
+</div>
