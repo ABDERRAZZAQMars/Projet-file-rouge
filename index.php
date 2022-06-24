@@ -4,7 +4,7 @@ require_once './controllers/HomeController.php';
 include 'views/includes/header.php';
 $home = new HomeController();
 
-$pages = ['home','add','update','delete'];
+$pages = ['home','add','update','delete','suivi','colis','trans','admin','client','transporteur'];
 
 if(isset($_GET['page'])){
     if(in_array($_GET['page'],$pages)){
