@@ -86,7 +86,7 @@ class Clientcontroller extends Controller
                 //Register admin from model function
                 if ($this->clientModel->register($data)) {
                     //Redirect to the login page
-                    $this->view('dashclient', $data);
+                    header('location:' . URLROOT . '/pages/index');
                 } else {
                     die('Something went wrong.');
                 }
@@ -115,14 +115,9 @@ class Clientcontroller extends Controller
                 'emailError' => '',
                 'passwordError' => '',
             ];
-            //Validate name
+            //Validate email
             if (empty($data['email'])) {
                 $data['emailError'] = 'SVP entrer le Email.';
-            } else {
-                //Check if name exists.
-                if ($this->clientModel->findAdminByEmail($data['name'])) {
-                    $data['nameError'] = 'Ce Nom est dèja inscrit! Choisi un autre nom.';
-                }
             }
 
             //Validate password
@@ -145,7 +140,7 @@ class Clientcontroller extends Controller
             $data = [
                 'email' => '',
                 'password' => '',
-                'nameError' => '',
+                'emailError' => '',
                 'passwordError' => ''
             ];
         }
@@ -163,6 +158,7 @@ class Clientcontroller extends Controller
 
     public function logout()
     {
+        unset($_SESSION['id']);
         unset($_SESSION['nom']);
         unset($_SESSION['email']);
         unset($_SESSION['role']);

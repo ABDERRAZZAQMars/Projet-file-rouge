@@ -50,4 +50,12 @@ class Transportmodels
         $this->db->execute();
         return $this->db->resultSet();
     }
+
+
+    public function getAllTransport()
+    {
+        $this->db->query('SELECT * FROM transport order by id DESC');
+        $this->db->execute();
+        return $this->db->resultSet();
+    }
 }

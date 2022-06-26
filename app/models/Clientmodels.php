@@ -44,6 +44,13 @@ class Clientmodels
         }
     }
 
+    public function getAllClient()
+    {
+        $this->db->query('SELECT * FROM client order by id DESC');
+        $this->db->execute();
+        return $this->db->resultSet();
+    }
+
     //Find user by name. name is passed in by the Controller.
     public function findAdminByEmail($email)
     {

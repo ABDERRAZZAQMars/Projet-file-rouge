@@ -32,7 +32,7 @@ class Transportcontroller extends Controller
 
             if ($this->transportModel->add($data)) {
                 //Redirect to the login page
-                $this->view('dashtransporteur', $data);
+                header('location: ' . URLROOT . '/pages/dashtransporteur');
             } else {
                 die('Something went wrong.');
             }

@@ -58,4 +58,11 @@ class Transporteurmodels
             return false;
         }
     }
+
+    public function getAllTransporteur()
+    {
+        $this->db->query('SELECT * FROM transporteur order by id DESC');
+        $this->db->execute();
+        return $this->db->resultSet();
+    }
 }

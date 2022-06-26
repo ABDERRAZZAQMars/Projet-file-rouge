@@ -87,8 +87,8 @@ class Transporteurcontroller extends Controller
 
                 //Register admin from model function
                 if ($this->transporteurModel->register($data)) {
-                    //Redirect to the login page
-                    $this->view('dashtransporteur', $data);
+                    //Redirect to the dashboard page
+                    header('location:' . URLROOT . '/pages/index');
                 } else {
                     die('Something went wrong.');
                 }
@@ -165,6 +165,7 @@ class Transporteurcontroller extends Controller
 
     public function logout()
     {
+        unset($_SESSION['id']);
         unset($_SESSION['nom']);
         unset($_SESSION['email']);
         unset($_SESSION['role']);
