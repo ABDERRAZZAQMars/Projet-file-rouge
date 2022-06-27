@@ -1,63 +1,6 @@
 <?php
 require APPROOT . '/views/includes/head.php';
 ?>
-<!-- Modal delete-->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content text-center">
-      <div class="modal-header justify-content-center">
-        <h5 class="modal-title text-danger" id="deleteModaltitle">Alerte! Suppression du transport</h5>
-      </div>
-      <div class="px-4 py-3">
-        Êtes-vous sûr de vouloir supprimer?<br>
-      </div>
-      <form action="<?php echo URLROOT; ?>/Transportcontroller/delete" method="POST">
-        <input type="text" name="id" class="id text-center">
-        <div class="px-4 py-3">
-          <button type="submit" name="save" class="btn btn-danger mr-2">Oui, supprimer ce transport.</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-<!-- Modal valider-->
-<div class="modal fade" id="validerModal" tabindex="-1" aria-labelledby="validerModal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content text-center">
-      <div class="modal-header justify-content-center">
-        <h5 class="modal-title text-danger" id="deleteModaltitle">Alerte! Validation de la réservation</h5>
-      </div>
-      <div class="px-4 py-3">
-        Êtes-vous sûr de vouloir valider?<br>
-      </div>
-      <form action="<?php echo URLROOT; ?>/Reservationcontroller/valider" method="POST">
-        <input type="text" name="id" class="id text-center">
-        <div class="px-4 py-3">
-          <button type="submit" name="save" class="btn btn-danger mr-2">Oui, valider la réservation.</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-<!-- Modal annuler-->
-<div class="modal fade" id="annulerModal" tabindex="-1" aria-labelledby="annulerModal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content text-center">
-      <div class="modal-header justify-content-center">
-        <h5 class="modal-title text-danger" id="deleteModaltitle">Alerte! Annulation de la réservation</h5>
-      </div>
-      <div class="px-4 py-3">
-        Êtes-vous sûr de vouloir annuler?<br>
-      </div>
-      <form action="<?php echo URLROOT; ?>/Reservationcontroller/annuler" method="POST">
-        <input type="text" name="id" class="id text-center">
-        <div class="px-4 py-3">
-          <button type="submit" name="save" class="btn btn-danger mr-2">Oui, annuler la réservation.</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
 <section class="container-fluid px-0 mx-0">
 
   <nav class="navbar navbar-dark bg-dark sticky-top navbar-expand-lg">
@@ -76,86 +19,133 @@ require APPROOT . '/views/includes/head.php';
     </div>
   </nav>
 
-  <div class="container-fluid mt-3 d-flex justify-content-between mx-auto row">
-    <div class="d-block col-4">
-      <div class="col-12">
-        <div class="container bg-dark rounded p-3">
-          <h1 class=""><i class="bi bi-person-lines-fill text-white"></i></h1>
-          <h4 class="text-white text-center pb-2 border-bottom"><?php echo $_SESSION['nom'] ?></h4>
-          <h6 class="text-white text-center"><?php echo $_SESSION['role'] ?></h6>
-        </div>
-        <div class="col-12 mt-4">
-          <div class="container bg-dark rounded text-white p-3">
-            <h1 class="text-white"><i class="bi bi-info-circle-fill text-white"></i> </h1>
-            <h4 class="text-white text-center pb-2 border-bottom">LISTES RESERVATIONS</h4>
-            <div class="row mt-4">
-              <div>
-                <table class="table table-dark table-responsive table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">Ville</th>
-                      <th scope="col">Date</th>
-                    </tr>
-                  </thead>
-                  <?php
-                  if (count($data['reservation']) > 0) { ?>
-                    <?php foreach ($data['reservation'] as $row) { ?>
-                      <tbody>
-                        <tr>
-                          <td><?php echo $row->trport_genre ?></td>
-                          <td><?php echo $row->ville_souhaite ?></td>
-                        </tr>
-                      </tbody>
-                    <?php } ?>
-                  <?php } else { ?>
-                    <tbody>
-                      <td colspan="3">
-                        <div class="text-center">
-                          <h1 class="pt-5">Pas de réservation</h1>
-                        </div>
-                      </td>
-                    </tbody>
-                  <?php } ?>
-                </table>
-              </div>
-            </div>
+  <div class="container-fluid mt-3 d-flex justify-content-between mx-auto row fixed-start">
+    <div class="col-lg-3 col-sm-12">
+      <div class="container bg-dark rounded p-3">
+        <h1 class=""><i class="bi bi-person-lines-fill text-white"></i></h1>
+        <h4 class="text-white text-center pb-2 border-bottom"><?php echo $_SESSION['nom'] ?></h4>
+        <h6 class="text-white text-center"><?php echo $_SESSION['role'] ?></h6>
+      </div>
+      <!--  -->
+      <div class="container bg-dark rounded p-3 my-3">
+        <h1 class="text-white"><i class="bi bi-plus-circle-dotted text-white"></i> </h1>
+        <h4 class="text-white text-center pb-2 border-bottom">STATISTIQUES</h4>
+        <div class="container d-flex flex-column">
+          <div class="d-flex justify-content-between bg-success p-2  mt-2">
+            <h5 class="text-white border-bottom">Total Clients</h5>
+            <h1 class="text-white"><?php
+                                    if (count($data['client']) >= 0) {
+                                      $num_rows = count($data['client']);
+                                      echo $num_rows;
+                                    }
+                                    ?></h1>
+          </div>
+          <div class="d-flex justify-content-between bg-primary p-2  mt-2">
+            <h5 class="text-white border-bottom">Total Transporteurs</h5>
+            <h1 class="text-white"><?php
+                                    if (count($data['transporteur']) >= 0) {
+                                      $num_rows = count($data['transporteur']);
+                                      echo $num_rows;
+                                    }
+                                    ?></h1>
+          </div>
+          <div class="d-flex justify-content-between bg-warning p-2  mt-2">
+            <h5 class="text-white border-bottom">Total Réservations</h5>
+            <h1 class="text-white"><?php
+                                    if (count($data['reservation']) >= 0) {
+                                      $num_rows = count($data['reservation']);
+                                      echo $num_rows;
+                                    }
+                                    ?></h1>
+          </div>
+          <div class="d-flex justify-content-between bg-info p-2  mt-2">
+            <h5 class="text-white border-bottom">Total Transports</h5>
+            <h1 class="text-white"><?php
+                                    if (count($data['transport']) >= 0) {
+                                      $num_rows = count($data['transport']);
+                                      echo $num_rows;
+                                    } ?>
+            </h1>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-5">
-      <div class="container bg-dark rounded text-white p-3" style="height: 80vh;">
+    <div class="col-lg-9 col-sm-12">
+      <div>
+        <div class="container bg-dark rounded text-white p-3">
+          <h1 class="text-white"><i class="bi bi-info-circle-fill text-white"></i> </h1>
+          <h4 class="text-white text-center pb-2 border-bottom">LISTES TRANSPORTS</h4>
+          <div class="row mt-4">
+            <div>
+              <table class="table table-dark table-responsive table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Matricule</th>
+                    <th scope="col">Coffre</th>
+                    <th scope="col">Ville</th>
+                  </tr>
+                </thead>
+                <?php if (count($data['transport']) > 0) { ?>
+                  <?php foreach ($data['transport'] as $row) { ?>
+                    <tbody>
+                      <tr>
+                        <td><?php echo $row->id ?></td>
+                        <td><?php echo $row->matricule ?></td>
+                        <td><?php echo $row->genre ?></td>
+                        <td><?php echo $row->volume_coffre ?></td>
+                        <td><?php echo $row->ville ?></td>
+                      </tr>
+                    </tbody>
+                  <?php } ?>
+                <?php } else { ?>
+                  <tbody>
+                    <td colspan="6">
+                      <div class="text-center">
+                        <h1 class="pt-5">Pas de transport</h1>
+                      </div>
+                    </td>
+                  </tbody>
+                <?php } ?>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="container bg-dark rounded text-white p-3 mt-3">
         <h1 class="text-white"><i class="bi bi-info-circle-fill text-white"></i> </h1>
-        <h4 class="text-white text-center pb-2 border-bottom">LISTES TRANSPORTS</h4>
+        <h4 class="text-white text-center pb-2 border-bottom">LISTES RESERVATIONS</h4>
         <div class="row mt-4">
           <div>
             <table class="table table-dark table-responsive table-striped">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Genre</th>
-                  <th scope="col">Matricule</th>
-                  <th scope="col">Coffre</th>
+                  <th scope="col">Client Email</th>
                   <th scope="col">Ville</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Validation</th>
                 </tr>
               </thead>
-              <?php if (count($data['transport']) > 0) { ?>
-                <?php foreach ($data['transport'] as $row) { ?>
+              <?php
+              if (count($data['reservation']) > 0) { ?>
+                <?php foreach ($data['reservation'] as $row) { ?>
                   <tbody>
                     <tr>
-                      <td><?php echo $row->id ?></td>
-                      <td><?php echo $row->matricule ?></td>
-                      <td><?php echo $row->genre ?></td>
-                      <td><?php echo $row->volume_coffre ?></td>
-                      <td><?php echo $row->ville ?></td>
+                      <td class="d-none"><?php echo $row->res_id ?></td>
+                      <td><?php echo $row->client_email ?></td>
+                      <td><?php echo $row->ville_souhaite ?></td>
+                      <td><?php echo $row->date_souhaite ?></td>
+                      <td><?php echo $row->validation ?></td>
                     </tr>
                   </tbody>
                 <?php } ?>
               <?php } else { ?>
                 <tbody>
-                  <td colspan="6">
+                  <td colspan="3">
                     <div class="text-center">
-                      <h1 class="pt-5">Pas de transport</h1>
+                      <h1 class="pt-5">Pas de réservation</h1>
                     </div>
                   </td>
                 </tbody>
@@ -163,50 +153,6 @@ require APPROOT . '/views/includes/head.php';
             </table>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="col-3">
-      <div class="container bg-dark rounded p-3">
-        <h1 class="text-white"><i class="bi bi-plus-circle-dotted text-white"></i> </h1>
-        <h4 class="text-white text-center pb-2 border-bottom">STATISTIQUES</h4>
-          <div class="container d-flex flex-column">
-            <div class="d-flex justify-content-between">
-              <h5 class="text-white">Total Clients</h5>
-              <h3 class="text-white"><?php
-                                      if (count($data['client']) >= 0) {
-                                        $num_rows = count($data['client']);
-                                        echo $num_rows;
-                                      }
-                                      ?></h3>
-            </div>
-            <div class="d-flex justify-content-between ">
-              <h5 class="text-white">Total Transporteurs</h5>
-              <h3 class="text-white"><?php
-                                      if (count($data['transporteur']) >= 0) {
-                                        $num_rows = count($data['transporteur']);
-                                        echo $num_rows;
-                                      }
-                                      ?></h3>
-            </div>
-            <div class="d-flex justify-content-between">
-              <h5 class="text-white">Total Réservations</h5>
-              <h3 class="text-white"><?php
-                                      if (count($data['reservation']) >= 0) {
-                                        $num_rows = count($data['reservation']);
-                                        echo $num_rows;
-                                      }
-                                      ?></h3>
-            </div>
-            <div class="d-flex justify-content-between">
-              <h5 class="text-white">Total Transports</h5>
-              <h3 class="text-white"><?php
-                                      if (count($data['transport']) >= 0) {
-                                        $num_rows = count($data['transport']);
-                                        echo $num_rows;
-                                      }
-                                      ?></h3>
-            </div>
-          </div>
       </div>
     </div>
   </div>

@@ -72,13 +72,13 @@
     <div class="container-fluid" style="background-color: #2E3192;">
         <div class="container row d-flex mx-auto py-4">
             <!-- LOGO DE PROJET -->
-            <div class="col-4">
+            <div class="col-lg-4 col-sm-12">
                 <img src="<?php echo URLROOT ?>/public/img/logoWhite.png" width="250" alt="">
                 <h6 class="text-white my-3 ">Partenaire officiel</h6>
-                <img src="<?php echo URLROOT ?>/public/img/logoyoucode-white.png " width="150 " alt=" ">
+                <img src="<?php echo URLROOT ?>/public/img/logoyoucode-white.png " width="150 " class="mb-5">
             </div>
             <!-- LISTE MENU -->
-            <div class="col-2 ">
+            <div class="col-lg-2 col-sm-4">
                 <h4 class="text-white mb-4">Menu</h4>
                 <ul class="list-unstyled">
                     <li class="mt-2 ">
@@ -93,7 +93,7 @@
                 </ul>
             </div>
             <!-- LISTE ENTREPRISE -->
-            <div class="col-2 ">
+            <div class="col-lg-2 col-sm-4">
                 <h4 class="text-white mb-4">Entreprise</h4>
                 <ul class="list-unstyled ">
                     <li class="mt-2 ">
@@ -108,7 +108,7 @@
                 </ul>
             </div>
             <!-- LISTE SERVICES -->
-            <div class="col-2 ">
+            <div class="col-lg-2 col-sm-4">
                 <h4 class="text-white mb-4">Services</h4>
                 <ul class="list-unstyled">
                     <li class="mt-2 ">
@@ -123,17 +123,17 @@
                 </ul>
             </div>
             <!-- LISTE SUIVEZ NOUS -->
-            <div class="col-2 ">
+            <div class="col-lg-2 col-sm-12">
                 <h4 class="text-white mb-4">Suivez-nous</h4>
                 <ul class="list-unstyled d-flex">
                     <li>
-                        <a href="#"><i class="bi bi-facebook fs-3 text-white me-lg-4"></i></a>
+                        <a href="#"><i class="bi bi-facebook fs-3 text-white me-4"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="bi bi-instagram fs-3 text-white me-lg-4"></i></a>
+                        <a href="#"><i class="bi bi-instagram fs-3 text-white me-4"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="bi bi-linkedin fs-3 text-white me-lg-4"></i></a>
+                        <a href="#"><i class="bi bi-linkedin fs-3 text-white me-4"></i></a>
                     </li>
                     <li>
                         <a href="#"><i class="bi bi-twitter fs-3 text-white"></i></a>

@@ -123,8 +123,8 @@ require APPROOT . '/views/includes/header.php';
             <div class="col-md-9 pt-5 text-center text-white">
                 <h1>EXCELLENCE. SIMPLEMENT LIVRÉ.</h1>
                 <h3>PROFITER DE CETTE NOUVELLE EXPÉRIENCE !</h3>
-                <button type=" button " class="btn text-white fw-bold fs-5 px-5 border border-white" data-toggle="modal" data-target="#transporteurexampleModalCenter" style="background-color: #FF8D29;">Louer Mon Transport</button>
-                <button type=" button " class="btn text-white fw-bold fs-5 px-5 border border-white" data-toggle="modal" data-target="#clientexampleModalCenter" style="background-color: #FF8D29;">Réserver un Transport</button>
+                <button type=" button " class="btn text-white fw-bold fs-5 px-5 border border-white mb-3" data-toggle="modal" data-target="#transporteurexampleModalCenter" style="background-color: #FF8D29;">Louer Mon Transport</button>
+                <button type=" button " class="btn text-white fw-bold fs-5 px-5 border border-white mb-3" data-toggle="modal" data-target="#clientexampleModalCenter" style="background-color: #FF8D29;">Réserver un Transport</button>
             </div>
         </div>
     </div>
@@ -167,14 +167,14 @@ require APPROOT . '/views/includes/header.php';
         </div>
     </div>
     <div class="container row mx-auto pb-5 d-flex justify-content-around">
-        <div class="card col-lg-5 col-md-4 col-sm-6" style="padding: 0 !important;">
+        <div class="card col-lg-5 col-md-5 col-sm-12" style="padding: 0 !important;">
             <img src="<?php echo URLROOT ?>/public/img/imgC1.jpg" class="card-img-top w-100" alt="...">
             <div class="card-body text-center">
                 <h5 class="card-title">Confiance</h5>
                 <p class="card-text">Nos peecoopers, sérieux et expérimentés, vous garantissent la livraison de vos colis dans les conditions les plus optimales.</p>
             </div>
         </div>
-        <div class="card col-lg-5 col-md-4 col-sm-6" style="padding: 0 !important;">
+        <div class="card col-lg-5 col-md-5 col-sm-12" style="padding: 0 !important;">
             <img src="<?php echo URLROOT ?>/public/img/imgC2.jpg" class="card-img-top" alt="...">
             <div class="card-body text-center">
                 <h5 class="card-title">Rapidité</h5>
@@ -187,7 +187,7 @@ require APPROOT . '/views/includes/header.php';
 
 <!-- START CONTACT NOUS -->
 <section class="container-fluid row d-flex justify-content-end align-items-center py-5" id="contact">
-    <div class="col-5">
+    <div class="col-lg-5 col-sm-12">
         <h3 class="pb-2 border-bottom">Envoie-nous un message</h3>
         <div class="mt-4">
             <form method="POST">
@@ -209,7 +209,7 @@ require APPROOT . '/views/includes/header.php';
             </form>
         </div>
     </div>
-    <div class="col-6">
+    <div class="col-lg-6 col-sm-12">
         <img src="<?php echo URLROOT ?>/public/img/alo.jpg" class="w-100" alt="">
     </div>
 </section>
